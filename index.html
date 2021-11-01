@@ -19,7 +19,7 @@
         <section id="user-goal">
             <h2>My Course Goal</h2>
             <!--<p v-html="outputGoal()"></p>-->
-            <p>{{outputGoal}}</p>
+            <p>{{outputGoal()}}</p>
             <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
             <br>
             <h2>Events in Action</h2>
@@ -35,7 +35,8 @@
                 type="text" 
                 v-model="name">
             <button v-on:click=resetInput>Reset Input</button>
-            <p>Your name : {{name}}</p>
+            <!--calling the method inside curly braces is not the best solution-->
+            <p>Your name : {{outputFullname()}}</p>
             <!--modifier-->
             <form v-on:submit.prevent="submitForm">
                 <input type="text">

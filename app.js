@@ -25,7 +25,7 @@ const app = Vue.createApp({
         remove(num){
             this.counter  = this.counter - num;
         },
-        setName(event,lastName){
+        setName(event){
             this.name = event.target.value;
         },
         // submitForm(event){
@@ -41,6 +41,12 @@ const app = Vue.createApp({
         resetInput(){
             this.name = '';
         },
+        outputFullname(){
+            if(this.name === ''){
+                return '';
+            }
+            return this.name + ' ' + 'Simic'; 
+        }
 
     }
 });
