@@ -26,7 +26,7 @@ const app = Vue.createApp({
             this.counter  = this.counter - num;
         },
         setName(event,lastName){
-            this.name = event.target.value + ' ' + lastName;
+            this.name = event.target.value;
         },
         // submitForm(event){
         //     //not refrseh form after submit
@@ -37,7 +37,10 @@ const app = Vue.createApp({
         },
         confirmInput(){
             this.confirmedName = this.name;
-        }
+        },
+        resetInput(){
+            this.name = '';
+        },
 
     }
 });

@@ -29,12 +29,13 @@
             <!--evaluated once value-->
             <p v-once>Starting Counter:{{counter}}</p>
             <p>Result : {{counter}}</p>
-            <br>
+            <br>  
+            <!--v-model is shortcard for v-bind:value and v-on:input-->
             <input 
                 type="text" 
-                v-on:input="setName($event,'Simic')" 
-                v-on:keyup.enter="confirmInput">
-            <p>Your name : {{confirmedName}}</p>
+                v-model="name">
+            <button v-on:click=resetInput>Reset Input</button>
+            <p>Your name : {{name}}</p>
             <!--modifier-->
             <form v-on:submit.prevent="submitForm">
                 <input type="text">
