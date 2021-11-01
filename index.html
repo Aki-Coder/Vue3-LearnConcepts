@@ -35,8 +35,9 @@
                 type="text" 
                 v-model="name">
             <button v-on:click=resetInput>Reset Input</button>
-            <!--calling the method inside curly braces is not the best solution-->
-            <p>Your name : {{outputFullname()}}</p>
+            <!--calling the method inside curly braces is not the best solution
+                use computed method property brackets-->
+            <p>Your name : {{fullName}}</p>
             <!--modifier-->
             <form v-on:submit.prevent="submitForm">
                 <input type="text">

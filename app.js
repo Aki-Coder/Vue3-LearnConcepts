@@ -28,10 +28,6 @@ const app = Vue.createApp({
         setName(event){
             this.name = event.target.value;
         },
-        // submitForm(event){
-        //     //not refrseh form after submit
-        //     event.preventDefault();
-        // },
         submitForm(){
             alert('Submitted');
         },
@@ -47,7 +43,14 @@ const app = Vue.createApp({
             }
             return this.name + ' ' + 'Simic'; 
         }
-
+    },
+    computed:{
+        fullName(){
+            if(this.name === ''){
+                return '';
+            }
+            return this.name + ' ' + 'Simic'; 
+        },
     }
 });
 
