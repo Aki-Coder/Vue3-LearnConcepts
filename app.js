@@ -6,6 +6,7 @@ const app = Vue.createApp({
             vueLink:'https://vuejs.org/',
             counter:0,
             name:'',
+            confirmedName:'',
         }
     },
     methods:{
@@ -27,6 +28,16 @@ const app = Vue.createApp({
         setName(event,lastName){
             this.name = event.target.value + ' ' + lastName;
         },
+        // submitForm(event){
+        //     //not refrseh form after submit
+        //     event.preventDefault();
+        // },
+        submitForm(){
+            alert('Submitted');
+        },
+        confirmInput(){
+            this.confirmedName = this.name;
+        }
 
     }
 });
