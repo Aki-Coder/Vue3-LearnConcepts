@@ -7,6 +7,8 @@ const app = Vue.createApp({
             counter:5,
             name:'',
             confirmedName:'',
+            //fullname:'',
+            lastName:'',
         }
     },
     methods:{
@@ -46,12 +48,38 @@ const app = Vue.createApp({
     },
     computed:{
         fullName(){
-            if(this.name === ''){
+            if(this.name === '' || this.lastName === ''){
                 return '';
             }
-            return this.name + ' ' + 'Simic'; 
+            return this.name + ' ' + this.lastName; 
         },
-    }
+    },
+    /*you can now use a name you used in a data or computed property
+    as a name for a warcher method*/
+    watch:{
+        // name(value){
+        //     if(value === ''){
+        //         this.fullname = ' ';
+        //     }else{
+        //         this.fullname = value + ' ' + this.lastName;
+        //     }
+        // },
+        // lastName(value){
+        //     if(value === ''){
+        //         return this.fullname = '';
+        //     }else{
+        //         this.fullname = this.name + ' ' + value
+        //     }
+        // },
+        counter(value){
+            if(value > 50){
+                const that = this;
+                setTimeout(function(){
+                    that.counter = 0;
+                },2000);
+            }
+        },
+    },
 });
 
 app.mount('#user-goal');
