@@ -17,11 +17,11 @@ const app = Vue.createApp({
                 return this.courseGolasB;
             }
         },
-        add(){
-            this.counter = this.counter + 1;
+        add(num){
+            this.counter = this.counter + num;
         },
-        remove(){
-            this.counter  = this.counter - 1;
+        remove(num){
+            this.counter  = this.counter - num;
         }
 
     }
