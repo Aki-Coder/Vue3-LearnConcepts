@@ -5,6 +5,7 @@ const app = Vue.createApp({
             courseGolasB:'Master Vue and build amazing apps',
             vueLink:'https://vuejs.org/',
             counter:0,
+            name:'',
         }
     },
     methods:{
@@ -22,7 +23,10 @@ const app = Vue.createApp({
         },
         remove(num){
             this.counter  = this.counter - num;
-        }
+        },
+        setName(event,lastName){
+            this.name = event.target.value + ' ' + lastName;
+        },
 
     }
 });
