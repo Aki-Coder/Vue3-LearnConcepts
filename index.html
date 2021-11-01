@@ -23,9 +23,9 @@
             <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
             <br>
             <h2>Events in Action</h2>
-            <button v-on:click="add(5)">Add 5</button>
+            <button @click="add(5)">Add 5</button>
             <!--which mouse button triger event-->
-            <button v-on:click.right="remove(5)">Remove 5</button>
+            <button @click.right="remove(5)">Remove 5</button>
             <!--evaluated once value-->
             <p v-once>Starting Counter:{{counter}}</p>
             <p>Result : {{counter}}</p>
@@ -38,7 +38,7 @@
                 type="text"
                 v-model="lastName">
 
-            <button v-on:click=resetInput>Reset Input</button>
+            <button @click=resetInput>Reset Input</button>
             <!--calling the method inside curly braces is not the best solution
                 use computed method property brackets-->
             <p>Your name : {{fullName}}</p>
