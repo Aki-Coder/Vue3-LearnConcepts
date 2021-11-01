@@ -47,6 +47,13 @@
                 <input type="text">
                 <button>Sign Up</button>
             </form>
+            <hr>
+            <div 
+                class="demo" 
+                :style="{borderColor:boxASelected ? 'red': '#ccc'}" 
+                @click="boxSelected('A')"></div>
+            <div class="demo" @click="boxSelected('B')"></div>
+            <div class="demo" @click="boxSelected('C')"></div>
         </section>
     </body>
 </html>
