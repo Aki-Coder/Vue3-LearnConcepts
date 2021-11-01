@@ -26,6 +26,8 @@
             <button v-on:click="add(5)">Add 5</button>
             <!--which mouse button triger event-->
             <button v-on:click.right="remove(5)">Remove 5</button>
+            <!--evaluated once value-->
+            <p v-once>Starting Counter:{{counter}}</p>
             <p>Result : {{counter}}</p>
             <br>
             <input 
