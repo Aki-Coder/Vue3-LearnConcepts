@@ -76,4 +76,11 @@
     border-color: #ec3169;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
   }
+
+  .demo {
+    width: calc(100% - 32px);
+    height: 100px;
+    margin: 16px;
+    border: 2px dashed #ccc;
+  }
   

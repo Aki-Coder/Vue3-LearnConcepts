@@ -9,6 +9,9 @@ const app = Vue.createApp({
             confirmedName:'',
             //fullname:'',
             lastName:'',
+            boxASelected:false,
+            boxBSelected:false,
+            boxCSelected:false,
         }
     },
     methods:{
@@ -44,6 +47,15 @@ const app = Vue.createApp({
                 return '';
             }
             return this.name + ' ' + 'Simic'; 
+        },
+        boxSelected(box){
+            if(box === 'A'){
+                this.boxASelected = true;
+            }else if(box === 'B'){
+                this.boxBSelected = true;
+            }else{
+                this.boxCSelected = true;
+            }
         }
     },
     computed:{
