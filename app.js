@@ -15,6 +15,9 @@ const app = Vue.createApp({
             //2.part of course
             goals:[],
             enteredGoalValue:'',
+            //3.part of course
+            currentUserInput:'',
+            message:'Vue is great!',
         }
     },
     methods:{
@@ -68,7 +71,14 @@ const app = Vue.createApp({
         removeGoal(idx){
             //find element with this index, and remove from array
             this.goals.splice(idx,1);
-        }
+        },
+         //3.part of course
+         saveInput(event){
+             this.currentUserInput = event.target.value;
+         },
+         setText(){
+             this.message = this.currentUserInput;
+         }
     },
     computed:{
         fullName(){
