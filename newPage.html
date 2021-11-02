@@ -25,11 +25,22 @@
                 @click="addGoal">
             Add goal
             </button>
-            <!--v-if really removes and adds element from and to the DOM
-                v-show just hides and show items with css-->
             <p v-if="goals.length === 0">No goals been added yet - please start adding some!</p>
             <ul v-else>
-                <li v-for="goal in goals">{{goal}}</li>
+                <!--index of this item-->
+                <li v-for="(goal, index) in goals">{{goal}} - {{index}}</li>
+            </ul>
+            <!--looping range of numbers-->
+            <!-- <ul>
+                <li v-for="num in 10">
+                    {{num}}
+                </li>
+            </ul> -->
+            <!--loop trough the object-->
+            <ul>
+                <li v-for="(value, key, index) in {name:'Aki', age: 23}">
+                   {{key}} : {{value}} - {{index}}
+                </li>
             </ul>
         </section>
     </body>
