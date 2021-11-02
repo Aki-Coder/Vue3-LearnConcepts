@@ -119,9 +119,43 @@ const app = Vue.createApp({
             }
         },
     },
+
+    /*LIFECYCLE*/
+    //in before create you won't see anything on the screen
+    beforeCreate(){
+        console.log('beforeCreate()');
+    },
+    //in created you won't see anything on the screen
+    created(){
+        console.log('created()');
+    },
+    beforeMount(){
+        console.log('beforeMount()');
+    },
+    //vue app was mounted to the screen, it was internally, all the data was processed
+    mounted(){
+        console.log('mounted()');
+    },
+    beforeUpdate(){
+        console.log('beforeUpdate()');
+    },
+    updated(){
+        console.log('updated()');
+    },
+    beforeUnmount(){
+        console.log('beforeUnmount()');
+    },
+    unmounted(){
+        console.log('unmounted()');
+    }
 });
 
 app.mount('#user-goal');
+setTimeout(function(){
+    //remove vue app
+    app.unmount();
+},3000);
+
 //----
 const app2 = Vue.createApp({
     //template for the second app
