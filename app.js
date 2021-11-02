@@ -63,6 +63,7 @@ const app = Vue.createApp({
         //2.part of course
         addGoal(){
             this.goals.push(this.enteredGoalValue);
+            this.enteredGoalValue = '';
         },
     },
     computed:{

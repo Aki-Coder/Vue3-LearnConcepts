@@ -27,9 +27,9 @@
             </button>
             <!--v-if really removes and adds element from and to the DOM
                 v-show just hides and show items with css-->
-            <p v-show="goals.length === 0">No goals been added yet - please start adding some!</p>
-            <ul v-show="goals.length > 0">
-                <li>Goal</li>
+            <p v-if="goals.length === 0">No goals been added yet - please start adding some!</p>
+            <ul v-else>
+                <li v-for="goal in goals">{{goal}}</li>
             </ul>
         </section>
     </body>
