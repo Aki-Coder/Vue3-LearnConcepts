@@ -12,6 +12,9 @@ const app = Vue.createApp({
             boxASelected:false,
             boxBSelected:false,
             boxCSelected:false,
+            //2.part of course
+            goals:[],
+            enteredGoalValue:'',
         }
     },
     methods:{
@@ -56,7 +59,11 @@ const app = Vue.createApp({
             }else{
                 this.boxCSelected = !this.boxCSelected;
             }
-        }
+        },
+        //2.part of course
+        addGoal(){
+            this.goals.push(this.enteredGoalValue);
+        },
     },
     computed:{
         fullName(){

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Basic</title>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/vue@next"></script>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Vue Course Goals</h1>
+        </header>
+        <section id="user-goal">
+            <h2>My course goal</h2>
+            <input type="text" v-model="enteredGoalValue">
+            <button @click="addGoal" >Add goal</button>
+            <p v-if="goals.length === 0">No goals been added yet - please start adding some!</p>
+            <ul>
+                <li>Goal</li>
+            </ul>
+        </section>
+    </body>
+</html>

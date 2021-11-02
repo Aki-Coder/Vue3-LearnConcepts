@@ -18,31 +18,23 @@
         </header>
         <section id="user-goal">
             <h2>My Course Goal</h2>
-            <!--<p v-html="outputGoal()"></p>-->
             <p>{{outputGoal()}}</p>
             <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
             <br>
             <h2>Events in Action</h2>
             <button @click="add(5)">Add 5</button>
-            <!--which mouse button triger event-->
             <button @click.right="remove(5)">Remove 5</button>
-            <!--evaluated once value-->
             <p v-once>Starting Counter:{{counter}}</p>
             <p>Result : {{counter}}</p>
             <br>  
-            <!--v-model is shortcard for v-bind:value and v-on:input-->
             <input 
                 type="text" 
                 v-model="name">
             <input 
                 type="text"
                 v-model="lastName">
-
             <button @click=resetInput>Reset Input</button>
-            <!--calling the method inside curly braces is not the best solution
-                use computed method property brackets-->
             <p>Your name : {{fullName}}</p>
-            <!--modifier-->
             <form v-on:submit.prevent="submitForm">
                 <input type="text">
                 <button>Sign Up</button>
@@ -62,6 +54,8 @@
                 :class="['demo',{active:boxCSelected}]"
                 @click="boxSelected('C')">
             </div>
+            <hr>
+            <a href="newPage.html">Click here</a>
         </section>
     </body>
 </html>
