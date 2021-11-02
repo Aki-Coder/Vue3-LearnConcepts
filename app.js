@@ -65,6 +65,10 @@ const app = Vue.createApp({
             this.goals.push(this.enteredGoalValue);
             this.enteredGoalValue = '';
         },
+        removeGoal(idx){
+            //find element with this index, and remove from array
+            this.goals.splice(idx,1);
+        }
     },
     computed:{
         fullName(){
