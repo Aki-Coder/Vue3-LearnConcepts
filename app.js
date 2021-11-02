@@ -123,9 +123,14 @@ const app = Vue.createApp({
 app.mount('#user-goal');
 //----
 const app2 = Vue.createApp({
+    //template for the second app
+    //string based template
+    template:`
+        <p>{{favMeal}}</p>
+    `,
     data(){
         return{
-            favMeal:'Pica',
+            favMeal:'Pizza',
         }
     }
 });
