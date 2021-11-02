@@ -22,7 +22,8 @@
     max-width: 40rem;
   }
   
-  #user-goal {
+  #user-goal, 
+  #app2 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     margin: 3rem auto;
     border-radius: 10px;
@@ -32,14 +33,16 @@
     max-width: 40rem;
   }
   
-  #user-goal h2 {
+  #user-goal h2,
+  #app2 h2  {
     font-size: 2rem;
     border-bottom: 4px solid #ccc;
     color: #4fc08d;
     margin: 0 0 1rem 0;
   }
   
-  #user-goal p {
+  #user-goal p,
+  #app2 p {
     font-size: 1.25rem;
     font-weight: bold;
     border: 1px solid #4fc08d;
@@ -49,18 +52,21 @@
     border-radius: 25px;
   }
   
-  #user-goal input {
+  #user-goal input,
+  #app2  input {
     font: inherit;
     border: 1px solid #ccc;
   }
   
-  #user-goal input:focus {
+  #user-goal input:focus,
+  #app2 input:focus {
     outline: none;
     border-color: #1b995e;
     background-color: #d7fdeb;
   }
   
-  #user-goal button {
+  #user-goal button,
+  #app2 button {
     font: inherit;
     cursor: pointer;
     border: 1px solid #ff0077;

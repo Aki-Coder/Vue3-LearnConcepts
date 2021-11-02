@@ -121,3 +121,13 @@ const app = Vue.createApp({
 });
 
 app.mount('#user-goal');
+//----
+const app2 = Vue.createApp({
+    data(){
+        return{
+            favMeal:'Pica',
+        }
+    }
+});
+
+app2.mount('#app2');
