@@ -18,6 +18,11 @@
         </header>
         <section id="user-goal">
             <h2>How Vue Works</h2>
+            <!--ne evidentiramo unos svakim pritiskom na taster, vec ga izdvajamo
+                samo uz pomoc f-je refs kad nam zatreba-->
+            <!--$refs are only populated after the component has been rendered. 
+                It is only meant as an escape hatch for direct child manipulation
+                - you should avoid accessing $refs from within templates or computed properties.-->
             <input 
                 type="text" 
                 ref="userText">
