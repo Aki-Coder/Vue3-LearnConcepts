@@ -65,6 +65,10 @@ const app = Vue.createApp({
             }
             return this.name + ' ' + this.lastName; 
         },
+        //if we have complex code
+        boxAClasses(){
+            return {active: this.boxASelected};
+        },
     },
     /*you can now use a name you used in a data or computed property
     as a name for a warcher method*/
